@@ -42,38 +42,38 @@ public class CqlExecCassandraMojo extends AbstractCassandraMojo {
   /**
    * The CQL script which will be executed
    *
-   * @parameter expression="${cassandra.cql.script}" default-value="${basedir}/src/cassandra/cql/exec.cql"
+   * @parameter property="cassandra.cql.script" default-value="${basedir}/src/cassandra/cql/exec.cql"
    */
   protected File cqlScript;
 
   /**
    * The CQL statement to execute singularly
    *
-   * @parameter expression="${cql.statement}"
+   * @parameter property="cql.statement"
    */
   protected String cqlStatement;
 
   /**
    * Expected type of the column value
-   * @parameter expression="${cql.defaultValidator}"
+   * @parameter property="cql.defaultValidator"
    */
   protected String defaultValidator = "BytesType";
 
   /**
    * Expected type of the key
-   * @parameter expression="${cql.keyValidator}"
+   * @parameter property="cql.keyValidator"
    */
   protected String keyValidator = "BytesType";
 
   /**
    * Expected type of the column name
-   * @parameter expression="${cql.comparator}"
+   * @parameter property="cql.comparator"
    */
   protected String comparator = "BytesType";
 
   /**
    * Version of CQL to use
-   * @parameter expression="${cql.version}"
+   * @parameter property="cql.version"
    * @since 1.2.1-2
    */
   protected String cqlVersion = "2.0.0";
